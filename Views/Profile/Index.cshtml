@@ -1,0 +1,19 @@
+@model ELNET01.Models.UserModel
+
+<h2>User Profile</h2>
+
+<form method="post" asp-controller="Profile" asp-action="UpdateProfile">
+    <label>Full Name:</label>
+    <input type="text" name="FullName" value="@Model.FullName" required />
+
+    <label>Email:</label>
+    <input type="email" value="@Model.Email" disabled />
+
+    <label>Phone Number:</label>
+    <input type="text" name="PhoneNumber" value="@Model.PhoneNumber" required />
+
+    <label>Country:</label>
+    <input type="text" name="Country" value="@Model.Country" required />
+
+    <button type="submit">Update Profile</button>
+</form>
